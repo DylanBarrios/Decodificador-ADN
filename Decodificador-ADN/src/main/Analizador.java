@@ -26,15 +26,15 @@ public class Analizador {
         return palabras;
     }   
     
-    public String analizador(ArrayList<String> primera, ArrayList segunda) {
-       String cadena = "";
-        for (int j = 0; j < primera.size(); j++) {
-            for (int i = 0; i < segunda.size(); i++) {        
-                if(primera.get(j).equals(segunda.get(i))){
-                    cadena = primera.get(j);
+    public String analizador(ArrayList<String> primera, ArrayList segunda) {    //Metodo que compara las 2 palabras para saber que cadena de caracteres es la mas grande
+       String cadena = "";                                                      //Varible que almacenara la cadena mas larga encontrada
+        for (int j = 0; j < primera.size(); j++) {                              //for que analizara cada espacio del primer ArrayList
+            for (int i = 0; i < segunda.size(); i++) {                          //for que compara cada espacio del primer ArrayList con el segundo
+                if(primera.get(j).equals(segunda.get(i))){                      //si los 2 espacio de los ArrayList son iguales significa que tienen una cadena similar
+                    cadena = primera.get(j);                                    //Se da el valor a la variable de la cadena mas larga
                 }
             }
         }
-    return cadena;
+    return cadena;                                                              //Retorna la cadena mas larga encontrada
     }
 }
